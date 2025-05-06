@@ -12,11 +12,11 @@
   border: 0;
   background: none;
 }
-.sun { fill: black; }
-.moon { fill: transparent; }
+.sun { fill: var(--link-color); transition: all 1s; }
+.moon { fill: transparent; transition: all 1s; }
 
 :global(.dark) .sun { fill: transparent; }
-:global(.dark) .moon { fill: white; }
+:global(.dark) .moon { fill: var(--link-color); }
 </style>
 
 <script>

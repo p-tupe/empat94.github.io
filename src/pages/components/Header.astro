@@ -4,8 +4,20 @@ import Navigation from "./Navigation.astro"
 import ThemeIcon from "./ThemeIcon.astro"
 ---
 
-<header><nav>
-  <Hamburger />
-  <ThemeIcon />
-  <Navigation />
-</nav></header>
+<header>
+  <nav>
+    <ThemeIcon />
+    <Navigation />
+    <Hamburger />
+  </nav>
+</header>
+
+<style>
+nav {
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+</style>

@@ -1,9 +1,53 @@
 html {
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  --background-color: #fffaf0;
+  --content-color: #4b2c20;
+  --link-color: #ff6347;
+  --emphasis-color: #d2691e;
+}
+
+html.dark {
+  --background-color: #2f2f2f;
+  --content-color: #ffe4b5;
+  --link-color: #ff4500;
+  --emphasis-color: #ffa07a;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--content-color);
+
+  a,
+  button {
+    color: var(--link-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--emphasis-color);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 body {
+  margin: 0;
+}
+
+main {
   margin: 0 auto;
   width: 100%;
   max-width: 80ch;
@@ -13,18 +57,4 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
-}
-
-html.dark {
-  background-color: #0d0950;
-  color: #fff;
-}
-
-.dark .nav-links a {
-  color: #fff;
 }

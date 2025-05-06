@@ -1,7 +1,43 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ProfilePic from "../images/profilePic.jpg"
 const pageTitle="Home Page"
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+
+  <section>
+
+    <Image
+      src={ProfilePic}
+      alt="Pritesh Tupe's Profile"
+      class="profilePic"
+    />
+
+    <h1>Pritesh Tupe</h1>
+    <p>Programmer | Writer | Violinist</p>
+
+  </section>
+
+  <section>
+  </section>
 </BaseLayout>
+
+<style>
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .profilePic {
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 999px;
+    box-shadow: 0 1px 14px 1px var(--content-color);
+  }
+}
+
+</style>
