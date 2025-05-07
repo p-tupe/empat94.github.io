@@ -5,6 +5,7 @@ import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import ProfilePic from "../images/profilePic.jpg"
 import ListItem from "./components/ListItem.astro"
+import Card from "./components/Card.astro"
 
 const pageTitle = "Home Page"
 
@@ -17,6 +18,52 @@ const recentPosts = (await getCollection("blog"))
 const latestChapters = (await getCollection("gs"))
   .sort((a, b) => b.data.part - a.data.part)
   .slice(0, 10)
+
+const projects = [
+  {
+    title: "Grand Simulation (Ongoing) [Web Novel]",
+    link: "/gs",
+    content: `A programmer trapped in a simulation! He and a band of misfits selected as "test subjects" must successfully complete the "test run" to be able to return to their world or die trying. Follow along on his journey where he matches his wits against the creators and their eerily familiar creations in a vast fantastical world, seeking a way back home.`,
+  },
+  {
+    title: "Fate of Arda (Discontinued) [Web Novel]",
+    link: "/foa",
+    content: `About a boy with a strange past, becoming a linchpin in a conflict spanning across realms. A coming of age with ancient blood with tragic power. A tale of love, courage and heartbreak.`,
+  },
+  {
+    title: "Zettel Merken [Self-Help]",
+    link: "https://github.com/p-tupe/zettel-merken",
+    content: `Supercharge your Supercharge your learning by combining two of the most revolutionary ideas in knowledge enhancement!`,
+    isLinkExternal: true,
+  },
+  {
+    title: "Creatures [Canvas Simulation]",
+    link: "https://p-tupe.github.io/creatures",
+    content: `A simulation of an environment where different creatures interact with the surroundings and each other.`,
+  },
+  {
+    title: "nvim.rss [Editor Plugin]",
+    link: "https://www.github.com/p-tupe/nvim-rss",
+    content: `A simple RSS Reader plugin for Neovim!`,
+    isLinkExternal: true,
+  },
+  {
+    title: "Pingmon [Monitoring Tool]",
+    link: "https://github.com/p-tupe/pingmon",
+    content: `Self-hosted web-site and jobs monitoring, with downtime notifications pushed to Slack.`,
+    isLinkExternal: true,
+  },
+  {
+    title: "Impossible XO [Board Game]",
+    link: "https://p-tupe.github.io/impossible-xo",
+    content: `A tic-tac-toe game that is impossible to win!`,
+  },
+  {
+    title: "Binary Clock ",
+    link: "https://p-tupe.github.io/binary-clock",
+    content: `A Binary Coded Decimal representation of current time.`,
+  },
+]
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -98,8 +145,20 @@ const latestChapters = (await getCollection("gs"))
     </ul>
   </section>
 
-  <section class="cards">
+  <section>
     <h1>Notable Projects</h1>
+    <div class="cards">
+      {
+        projects.map((p) => (
+          <Card
+            title={p.title}
+            content={p.content}
+            link={p.link}
+            isLinkExternal={p.isLinkExternal}
+          />
+        ))
+      }
+    </div>
   </section>
 </BaseLayout>
 
@@ -120,6 +179,18 @@ const latestChapters = (await getCollection("gs"))
       margin: 0 auto;
       border-radius: 999px;
       box-shadow: 0 1px 14px 1px var(--content-color);
+    }
+  }
+
+  div.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  @media screen and (max-width: 768px) {
+    div.cards {
+      grid-template-columns: repeat(1, 1fr);
     }
   }
 
