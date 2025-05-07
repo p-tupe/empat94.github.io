@@ -13,6 +13,6 @@ Just follow the steps below (these are for Chrome and other chromium-based brows
   4. Select relevant option (btw, full size = scrolling shot)
   5. Done
 
-![Browser Dev Tools Screenshot](/assets/imgs/browser_screenshot.png)
+![Browser Dev Tools Screenshot](/assets/images/browser_screenshot.png)
 
   I'm pretty sure there are ways to do the same on all major browsers, although I haven't tried any. If you know, do comment the same and I'll add it to the post (with due credits, of course). That is all! I did say "quick" tip, didn't I? Cheers.

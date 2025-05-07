@@ -11,11 +11,11 @@ As I stepped out the car at what appeared to be a deserted place, I saw a couple
 
 Next stop - Waga border. This is where a flag lowering ceremony is held every evening. We reached here around 4:30 pm; and the storm clouds that had supposedly "dissipated" earlier revealed themselves in the form of violent winds and heavy down-pour. I thought the ceremony might be canceled. We stayed in the parking lot for another 45 min probably, then decided to make our way inside, despite the rains. As if on cue, the storm mellowed and the climate slowly returned to its afternoon glory by the time we reached the "stadium". Initially, Shubham and I got in with the herd and found ourselves standing in the middle of crowd on the edge between the upper section and lower section of the seats. We couldn’t call Aakash or Rishab, maybe the reception was low or there was signal jamming ongoing, either way we stood there amidst the masses. Suddenly Aakash called us from the side beckoning us; apparently he had been searching for us this whole time. We followed him, finding Rishab at the main entrance. 
 
-![waga_border](/assets/imgs/waga_border.jpg)
+![waga_border](/assets/images/waga_border.jpg)
 
 Then we headed inside through the VIP entrance - thanks to Rishab. We swaggered in, got some seats and waited for the show to start; something else started instead - rain rain come again... All the VIPs did an exodus back to the covered part of the stadium. We, on the other hand, took this opportunity to move ahead. We sat right behind the foreigner's gallery. Quite the luck we had that day. Eventually, the thing started and went on. I wasn't much interested in it, thought it was all an elaborate pissing contest to be honest. Aakash and Rishab enjoyed from the bottom of their hearts, never seen them so excited; Shubham seemed in his own world. It all lasted some 1 hour or so.
 
-![waga_border_1](/assets/imgs/waga_border_1.jpg)
+![waga_border_1](/assets/images/waga_border_1.jpg)
 
 We got back to the parking lot, got in our car and stayed there for another hour… Yes, you read that right, we were in the parking lot for more time than the ceremony itself, not by choice though - there was a traffic jam. I have been in my share of jams, mind you, but I have never been stuck in a damn parking lot. My headache had returned in full force, and Shubham later said he too was ill since morning. Him and I were laying about in the backseat, Aakash was in the drivers seat (not driving though) and Rishab shotgun. We managed to get out after a few bumps and Aakash asked me to take the wheel as he was feeling out of sorts after all the traffic and congestion. While I wasn't my best self myself, I made the decision to drive for a while so he can recover and go the rest of the way.
 
@@ -29,7 +29,7 @@ Day 3
 
 Our journey ahead would take us from Ludhiana to Shimla. However, there was Chandigarh in between, and we had a couple of spots to see. Oh by the way, we left early (around 7 am) and decided to have our breakfast in Chandigarh. Big mistake.
 
-![welcome_to_chandigarh](/assets/imgs/welcome_to_chandigarh.jpg)
+![welcome_to_chandigarh](/assets/images/welcome_to_chandigarh.jpg)
 
 Our first stop was "Rose Garden", also apparently there was a café nearby. Soon we reached the place. We traversed all around (outside of) the garden hoping to sight the café. We found a handcart selling "Bombay Gola" and a hut selling cold drinks. We went in the garden then, hoping the place would be inside. Thankfully, the garden was more or less flat land and it was easy for us to see there was no café inside. After about half hour of wandering about inside, we decided to take our leave. We were very hungry. I suggested let us search for a restaurant directly on the map; someone (I don’t recall who) decided to put in the location of some famous lake nearby. His logic was that since the lake was so popular, there were bound to be some food places nearby. Big Mistake #2.
 
@@ -39,21 +39,21 @@ Shimla was not too far now, so we decided to have "brunch" in Shimla itself; it 
 
 In any case, we reached safely. Found our hotel - it was about 2 floors underground (which wasn't really, as I would soon find out). We had a saying going about that every time we go to a new hotel, we get an upgrade. This was uncannily true. While our first was a cramped hell, this one seemed like a Royal Suite (relatively). Shubham even joked that we could play cricket in the bathroom - yeah, it was that big. But there was no ac, or cooler or even a fan. Apparently there was no needs as it was cold enough. Also, I noticed the windows. They opened up to an awesome view like we were on the top of a hill. And we were.
 
-![shimla_hotel](/assets/imgs/shimla_hotel.jpg)
+![shimla_hotel](/assets/images/shimla_hotel.jpg)
 
 I mentally smacked myself of thinking we were underground. The building was stacked up against the mountain like a bug on a rock. Many structures in Shimla as similar. This was less of a hotel and more of a homestay. The owner was quite friendly as well. He suggested we go to Mall Road first, we said we were hungry, he said then we should go to Mall Road. Apparently the place had everything. We parked our car in some super structure that had "underground" parking levels. Then we took a couple of elevators one after other (yes, multiple) to reach to the top of this famous Mall Road. There was a cricket match going on at the time, I think between Ind & Pak for World Cup. A crowd had gathered outside a shop to watch it on a flickering tv screen. I am not a fan of the game (I like playing it, not watching it), but I understand some people like to watch it. I was slightly irritated though, by Aakash and Rishab constantly having their heads in their phone looking for score. You're on a damn trip with your friends far from home and all you do it stare at your phone. I don’t understand the fanaticism behind the cricket. I said the same to those two and they kept their score-activity down to peeking at their phones every few minutes (for a while).
 
-![mall_road](/assets/imgs/mall_road.jpg)
+![mall_road](/assets/images/mall_road.jpg)
 
 In any case, we found a place to have lunch. We were past the "brunch" time as well. I wanted to taste the non-veg offerings here and we ordered couple of chicken dishes and rotis. It was… bland. Everything was watered down. There was barely any gravy. Chicken was chewy. And everything was expensive. But we were starving, and we ate like there was no tomorrow. I soon realized I'd might never like the food up North. None of us did. Rishab is a vegetarian by religion, so while we had lunch, he went out to have some Oreo and tea. I still wonder how that guy survives. He barely eats anything.
 
 Eventually, we finished our lunch. Wandered about the place. There is a church on top, and an international convention was being held. Aakash and Rishab went about shopping. Shubham followed them. I decided to wander about on my own. I found several good spots where I could see a large portion of the city. I antagonized a monkey (unintentionally), and got a good photo to show for it.
 
-![monkey](/assets/imgs/monkey.jpg)
+![monkey](/assets/images/monkey.jpg)
 
 
 I covered the entire width of the top of Mall Road. It was a good walk. However, my cell battery was reaching critical levels, so I called Shubham to regroup. Apparently, they were still shopping. I went back and we descended. They missed several beautiful places and barely touched the top of Mall Road due to their shopping sprees, but I doubt they cared. Either way, we had spent several hours here and it was getting dark. We got back to our rooms. Freshened up and went out for dinner. Rishab was the one who ate this time, helped along by Shubham. Later we might have played cards, but _someone_ (ahem, Rishab) said they'd bring them and forgot. So we just slept. Tomorrow whole day was meant for exploring Shimla.
 
-![shimla_night](/assets/imgs/shimla_night.jpg)
+![shimla_night](/assets/images/shimla_night.jpg)
 
 _continued on Part 3, coming soon_

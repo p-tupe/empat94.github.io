@@ -3,7 +3,7 @@ date: "2022-10-04T00:00:00Z"
 title: Preparing for PGDM in Canada
 ---
 
-![Canadian Flag](/assets/imgs/canada-flag.jpg)
+![Canadian Flag](/assets/images/canada-flag.jpg)
 
 <em>
 This is a rough outline of the steps I took preparing for my journey to Canada for my studies. I'm outlining them below to give a sort of holistic view of the whole process for those who intend to do the same. Please do not base your entire plan on this single post; I highly recommend contacting a consulting agency. They provide all information for __free__!

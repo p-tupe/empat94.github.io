@@ -77,7 +77,7 @@ _Yes, we must keep in mind that the solutions need to be **SIMPLE**, else we mis
 1. Popular packages from public repository
 1. Best practices, conventions
 
-## Practical
+### Practical
 
 1. 6 small projects
 2. 3 medium projects

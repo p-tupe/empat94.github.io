@@ -1,43 +1,166 @@
 ---
-import { Image } from 'astro:assets';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content"
+import { Image } from "astro:assets"
+
+import BaseLayout from "../layouts/BaseLayout.astro"
 import ProfilePic from "../images/profilePic.jpg"
-const pageTitle="Home Page"
+import ListItem from "./components/ListItem.astro"
+
+const pageTitle = "Home Page"
+
+const recentPosts = (await getCollection("blog"))
+  .sort(
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 10)
+
+const latestChapters = (await getCollection("gs"))
+  .sort((a, b) => b.data.part - a.data.part)
+  .slice(0, 10)
 ---
+
 <BaseLayout pageTitle={pageTitle}>
+  <section class="landing">
+    <div style="text-align: center">
+      <Image src={ProfilePic} alt="Pritesh Tupe's Profile" class="profilePic" />
 
-  <section>
+      <h1>PRITESH TUPE</h1>
+      <p style="color: var(--subcontent-color);">
+        Programmer | Writer | Violinist
+      </p>
+    </div>
 
-    <Image
-      src={ProfilePic}
-      alt="Pritesh Tupe's Profile"
-      class="profilePic"
-    />
+    <blockquote style="text-align: center;">
+      With all its sham, drudgery, and broken dreams, it is still a beautiful
+      world. Be cheerful. Strive to be happy. &nbsp;<a
+        style="color: var(--subcontent-color);text-decoration: none;"
+        href="https://desiderata.com/">~ Desiderata</a
+      >
+    </blockquote>
 
-    <h1>Pritesh Tupe</h1>
-    <p>Programmer | Writer | Violinist</p>
+    <div style="width: 100%; display: flex; justify-content: space-evenly;">
+      <a href="/notes">Notes</a>
+      <a href="/photos">Photos</a>
+      <a href="/travels">Travels</a>
+      <a href="/about">About</a>
+      <a href="/rss.xml">RSS</a>
+    </div>
 
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="chevron-down"
+    >
+      <polyline points="3 10 12 15 21 10"></polyline>
+    </svg>
   </section>
 
-  <section>
+  <section class="list">
+    <h1>Recent Posts</h1>
+    <ul class="list">
+      {
+        recentPosts.map((post) => (
+          <ListItem
+            subtitle={new Date(post.data.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+            })}
+            title={post.data.title}
+            url={`/posts/${post.id}`}
+          />
+        ))
+      }
+      <ListItem title="Show More" url="/posts" />
+    </ul>
+  </section>
+
+  <section class="list">
+    <h1>Latest Grand Simulation Chapters</h1>
+    <ul class="list">
+      {
+        latestChapters.map((ch) => (
+          <ListItem title={ch.data.title} url={`/gs/${ch.id}`} />
+        ))
+      }
+      <ListItem title="Show All" url="/gs" />
+    </ul>
+  </section>
+
+  <section class="cards">
+    <h1>Notable Projects</h1>
   </section>
 </BaseLayout>
 
 <style>
+  section.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .profilePic {
-    max-width: 300px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 999px;
-    box-shadow: 0 1px 14px 1px var(--content-color);
+    .profilePic {
+      max-width: 300px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 999px;
+      box-shadow: 0 1px 14px 1px var(--content-color);
+    }
   }
-}
 
+  section.list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    ul.list {
+      width: 100%;
+      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-evenly;
+      padding: 5em;
+    }
+
+    @media screen and (max-width: 768px) {
+      ul.list {
+        font-size: 16px;
+        padding: 1em;
+      }
+    }
+  }
+
+  svg.chevron-down {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
 </style>

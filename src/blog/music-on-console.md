@@ -50,7 +50,7 @@ $brew services start jack
 
 Now running **mocp** again gave me :
 
-![mocp image](/assets/imgs/mocp.png)
+![mocp image](/assets/images/mocp.png)
 
 ## Customization
 
