@@ -1,21 +1,62 @@
 ---
 import "../styles/global.css"
 
+import { AstroSeo } from "@astrolib/seo"
+
 import Header from "../pages/components/Header.astro"
 import Footer from "../pages/components/Footer.astro"
 
 const { pageTitle } = Astro.props
 ---
 
+<AstroSeo
+  title={pageTitle}
+  description="Pritesh Tupe's personal website."
+  canonical="https://www.priteshtupe.com/"
+  openGraph={{
+    // url: "https://www.url.ie/a",
+    // title: "Open Graph Title",
+    // description: "Open Graph Description",
+    // images: [
+    //   {
+    //     url: "https://www.example.ie/og-image-01.jpg",
+    //     width: 800,
+    //     height: 600,
+    //     alt: "Og Image Alt",
+    //     type: "image/jpeg",
+    //   },
+    //   {
+    //     url: "https://www.example.ie/og-image-02.jpg",
+    //     width: 900,
+    //     height: 800,
+    //     alt: "Og Image Alt Second",
+    //     type: "image/jpeg",
+    //   },
+    //   { url: "https://www.example.ie/og-image-03.jpg" },
+    //   { url: "https://www.example.ie/og-image-04.jpg" },
+    // ],
+    // site_name: "SiteName",
+  }}
+  twitter={{
+    // handle: "@handle",
+    // site: "@site",
+    // cardType: "summary_large_image",
+  }}
+/>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="title" content={pageTitle} />
+    <meta name="title" content="Pritesh Tupe" />
     <meta name="description" content="Pritesh Tupe's personal website" />
-    <title>{pageTitle}</title>
+
+    <title>Pritesh Tupe</title>
     <script>
       const theme = (() => {
         const localStorageTheme = localStorage?.getItem("theme") ?? ""
