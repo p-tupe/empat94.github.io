@@ -22,7 +22,12 @@ const latestChapters = (await getCollection("gs"))
 <BaseLayout pageTitle={pageTitle}>
   <section class="landing">
     <div style="text-align: center">
-      <Image src={ProfilePic} alt="Pritesh Tupe's Profile" class="profilePic" />
+      <Image
+        loading="eager"
+        src={ProfilePic}
+        alt="Pritesh Tupe's Profile"
+        class="profilePic"
+      />
 
       <h1>PRITESH TUPE</h1>
       <p style="color: var(--subcontent-color);">
@@ -30,7 +35,7 @@ const latestChapters = (await getCollection("gs"))
       </p>
     </div>
 
-    <blockquote style="text-align: center;">
+    <blockquote class="quote">
       With all its sham, drudgery, and broken dreams, it is still a beautiful
       world. Be cheerful. Strive to be happy. &nbsp;<a
         style="color: var(--subcontent-color);text-decoration: none;"
@@ -99,12 +104,15 @@ const latestChapters = (await getCollection("gs"))
 </BaseLayout>
 
 <style>
-  section.landing {
+  section {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     min-height: 100vh;
+  }
+
+  section.landing {
+    justify-content: space-evenly;
 
     .profilePic {
       max-width: 300px;
@@ -116,16 +124,10 @@ const latestChapters = (await getCollection("gs"))
   }
 
   section.list {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
     justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
 
     ul.list {
       width: 100%;
-      font-size: 18px;
       display: flex;
       flex-direction: column;
       flex: 1;
@@ -135,7 +137,6 @@ const latestChapters = (await getCollection("gs"))
 
     @media screen and (max-width: 768px) {
       ul.list {
-        font-size: 16px;
         padding: 1em;
       }
     }
@@ -161,6 +162,33 @@ const latestChapters = (await getCollection("gs"))
     }
     60% {
       transform: translateY(-5px);
+    }
+  }
+
+  .quote {
+    position: relative;
+    text-align: center;
+    font-family: cursive;
+  }
+
+  @media screen and (min-width: 768px) {
+    .quote:before,
+    .quote:after {
+      position: absolute;
+      color: var(--emphasis-color);
+      font-size: 4em;
+    }
+
+    .quote:before {
+      content: "“";
+      left: -1rem;
+      top: -3.5rem;
+    }
+
+    .quote:after {
+      content: "”";
+      right: -1rem;
+      bottom: -4rem;
     }
   }
 </style>
