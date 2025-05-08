@@ -72,8 +72,6 @@ const { pageTitle } = Astro.props
         return "dark"
       })()
 
-      console.log("Theme is now: ", theme)
-
       if (theme === "light") {
         document.documentElement.classList.remove("dark")
       } else {

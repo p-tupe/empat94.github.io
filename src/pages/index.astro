@@ -9,7 +9,7 @@ import Card from "./components/Card.astro"
 
 const pageTitle = "Home Page"
 
-const recentPosts = (await getCollection("blog"))
+const recentPosts = (await getCollection("posts"))
   .sort(
     (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
@@ -191,25 +191,6 @@ const projects = [
   @media screen and (max-width: 768px) {
     div.cards {
       grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  section.list {
-    justify-content: space-between;
-
-    ul.list {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      justify-content: space-evenly;
-      padding: 5em;
-    }
-
-    @media screen and (max-width: 768px) {
-      ul.list {
-        padding: 1em;
-      }
     }
   }
 

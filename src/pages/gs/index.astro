@@ -1,0 +1,22 @@
+---
+import { getCollection } from "astro:content"
+import ListItem from "../components/ListItem.astro"
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+const allChapters = (await getCollection("gs")).sort(
+  (a, b) => a.data.part - b.data.part,
+)
+---
+
+<BaseLayout>
+  <h1 style="text-align: center;">All Chapters</h1>
+  <section class="list">
+    <ul class="list">
+      {
+        allChapters.map((ch) => (
+          <ListItem title={ch.data.title} url={`/gs/${ch.id}`} />
+        ))
+      }
+    </ul>
+  </section>
+</BaseLayout>
