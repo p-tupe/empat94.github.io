@@ -194,7 +194,7 @@ I could just non-dockerize nginx too. I was already running it on the host netwo
 
 So, download nginx using sudo apt-get and change /etc/nginx/nginx.conf to /etc/nginx/nginx.conf.bak. Open a new file nginx.conf there and add the following:
 
-```
+```nginx
 worker_processes  auto;
 
 events {
@@ -298,7 +298,7 @@ http {
 
 I have added different components in this file from several different sources. What you must focus on are the SSL/TLS section and the location redirects. Also, note that I built this config based on what I learned over a few days of frantic efforts to get things going. _I AM NOT AN EXPERT IN NGINX (OR DOCKER), TRUST BUT VERIFY!_ This is a minimal config that I worked for me:
 
-```conf
+```nginx
 worker_processes  auto;
 
 events {
@@ -355,7 +355,7 @@ By the way, the default username and database name of PostgreSQL are "postgres".
 
 Also, the database host is your gateway of nextcloud instance hosted on a bridged docker network (usually docker0). You could get it by doing:
 
-```s
+```sh
 sudo docker inspect my-nextcloud | grep "Gateway"
 ```
 

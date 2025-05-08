@@ -106,7 +106,7 @@
 
 - Clear up old logs
 
-  ```shh
+  ```bash
   # Check size
   journalctl --disk-usage
 

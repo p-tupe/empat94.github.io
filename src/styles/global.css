@@ -36,6 +36,12 @@ html.dark {
   --subcontent-color: #bfaf9d;
   --link-color: #ff4500;
   --emphasis-color: #ffa07a;
+
+  .astro-code,
+  .astro-code span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg) !important;
+  }
 }
 
 html {
@@ -158,5 +164,3 @@ section.list {
     }
   }
 }
-
-

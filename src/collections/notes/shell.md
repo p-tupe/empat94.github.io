@@ -335,7 +335,7 @@
 
 - Convert a mov to mp4 (with compression):
 
-  ````sh
+  ```sh
   ffmpeg -i video.mov -vcodec h264 -acodec mp2 video.mp4
   ```
 
