@@ -5,7 +5,7 @@ import { Image } from "astro:assets"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import ProfilePic from "../images/profilePic.jpg"
 import ListItem from "./components/ListItem.astro"
-import Card from "./components/Card.astro"
+import ProjectCard from "./components/ProjectCard.astro"
 
 const pageTitle = "Home Page"
 
@@ -23,45 +23,52 @@ const projects = [
   {
     title: "Grand Simulation (Ongoing) [Web Novel]",
     link: "/gs",
-    content: `A programmer trapped in a simulation! He and a band of misfits selected as "test subjects" must successfully complete the "test run" to be able to return to their world or die trying. Follow along on his journey where he matches his wits against the creators and their eerily familiar creations in a vast fantastical world, seeking a way back home.`,
+    imageUrl: "/src/images/Grand_Simulation.jpeg",
+    content: `<p><strong>A programmer trapped in a simulation!</strong></p>  <p> He and a band of misfits selected as "test subjects" must successfully complete the "test run" to be able to return to their world or die trying. Follow along on his journey where he matches his wits against the creators and their eerily familiar creations in a vast fantastical world, seeking a way back home. </p>`,
+    isLinkExternal: false,
   },
   {
     title: "Fate of Arda (Discontinued) [Web Novel]",
     link: "/foa",
-    content: `About a boy with a strange past, becoming a linchpin in a conflict spanning across realms. A coming of age with ancient blood with tragic power. A tale of love, courage and heartbreak.`,
+    content: `<p> About a boy with a strange past, becoming a linchpin in a conflict spanning across realms. A coming of age with ancient blood with tragic power. A tale of love, courage and heartbreak. </p>`,
+    isLinkExternal: false,
   },
   {
     title: "Zettel Merken [Self-Help]",
     link: "https://github.com/p-tupe/zettel-merken",
-    content: `Supercharge your Supercharge your learning by combining two of the most revolutionary ideas in knowledge enhancement!`,
+    content: `<p> Supercharge your Supercharge your learning by combining two of the most revolutionary ideas in knowledge enhancement! </p>`,
     isLinkExternal: true,
   },
   {
     title: "Creatures [Canvas Simulation]",
     link: "https://p-tupe.github.io/creatures",
-    content: `A simulation of an environment where different creatures interact with the surroundings and each other.`,
+    content: `<p> A simulation of an environment where different creatures interact with the surroundings and each other. </p>`,
+    isLinkExternal: true,
   },
   {
     title: "nvim.rss [Editor Plugin]",
     link: "https://www.github.com/p-tupe/nvim-rss",
-    content: `A simple RSS Reader plugin for Neovim!`,
+    content: `<p> A simple RSS Reader plugin for Neovim! </p>`,
     isLinkExternal: true,
   },
   {
     title: "Pingmon [Monitoring Tool]",
     link: "https://github.com/p-tupe/pingmon",
-    content: `Self-hosted web-site and jobs monitoring, with downtime notifications pushed to Slack.`,
+    content: `<p> Self-hosted web-site and jobs monitoring, with downtime notifications pushed to Slack and Email.
+        </p>`,
     isLinkExternal: true,
   },
   {
     title: "Impossible XO [Board Game]",
     link: "https://p-tupe.github.io/impossible-xo",
-    content: `A tic-tac-toe game that is impossible to win!`,
+    content: `<p> A tic-tac-toe game that is impossible to win! </p>`,
+    isLinkExternal: true,
   },
   {
     title: "Binary Clock ",
     link: "https://p-tupe.github.io/binary-clock",
-    content: `A Binary Coded Decimal representation of current time.`,
+    content: `<p> A Binary Coded Decimal representation of current time. </p>`,
+    isLinkExternal: true,
   },
 ]
 ---
@@ -93,25 +100,9 @@ const projects = [
     <div style="width: 100%; display: flex; justify-content: space-evenly;">
       <a href="/notes">Notes</a>
       <a href="/photos">Photos</a>
-      <a href="/travels">Travels</a>
       <a href="/about">About</a>
       <a href="/rss.xml">RSS</a>
     </div>
-
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="chevron-down"
-    >
-      <polyline points="3 10 12 15 21 10"></polyline>
-    </svg>
   </section>
 
   <section class="list">
@@ -150,7 +141,8 @@ const projects = [
     <div class="cards">
       {
         projects.map((p) => (
-          <Card
+          <ProjectCard
+            imageUrl={p.imageUrl}
             title={p.title}
             content={p.content}
             link={p.link}
@@ -168,6 +160,7 @@ const projects = [
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    max-height: 100vh;
   }
 
   section.landing {
@@ -178,7 +171,7 @@ const projects = [
       height: auto;
       margin: 0 auto;
       border-radius: 999px;
-      box-shadow: 0 1px 14px 1px var(--content-color);
+      box-shadow: 0 1px 12px 1px var(--content-color);
     }
   }
 
@@ -191,29 +184,6 @@ const projects = [
   @media screen and (max-width: 768px) {
     div.cards {
       grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  svg.chevron-down {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
     }
   }
 

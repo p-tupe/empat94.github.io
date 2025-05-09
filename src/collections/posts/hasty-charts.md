@@ -11,7 +11,7 @@ After lots of twists and turns, I ended up creating my own function to render ch
 
 This is how the chart looks with sample data:
 
-![chart](/assets/images/chart.jpg)
+![chart](/src/images/chart.jpg)
 
 Check out the code [Gist Link](https://gist.github.com/p-tupe/818b0b5e41e4c37b30d3407d6247ca52):
 

@@ -8,10 +8,7 @@ import compressor from "astro-compressor"
 // https://astro.build/config
 export default defineConfig({
   image: {
-    domains: [
-      // TODO: Find a better image processing tool
-      "static.priteshtupe.com",
-    ],
+    domains: ["static.priteshtupe.com"],
   },
   prefetch: {
     prefetchAll: true,

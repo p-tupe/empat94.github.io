@@ -9,18 +9,8 @@ const notes = (await getCollection("notes")).sort()
 <BaseLayout>
   <h1 style="text-align: center;">All Notes</h1>
 
-  <!-- <fieldset class="search"> -->
-  <!--   <form onsubmit="searchNotes()"> -->
-  <!--     <input type="search" placeholder="Search Notes" /> -->
-  <!--     <button type="submit">Search</button> -->
-  <!--     <button type="reset">Reset</button> -->
-  <!--   </form> -->
-  <!-- </fieldset> -->
-  <!---->
-  <!-- <div id="search-results"></div> -->
-
   <ul class="cloud">
-    {notes.map((note) => <a href={`/notes/${note.id}`}>{note.id}</a>)}
+    {notes.length && notes.map((note) => <a href={`/notes/${note.id}`}>{note.id}</a>)}
   </ul>
 </BaseLayout>
 

@@ -99,16 +99,15 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 main {
   margin: 0 auto;
   width: 100%;
   max-width: 80ch;
-  padding: 1em;
-  padding-top: 2em;
-}
-
-* {
-  box-sizing: border-box;
+  padding: 2.5em 1em 2em 1em;
 }
 
 h1 {
@@ -163,4 +162,8 @@ section.list {
       padding: 1em;
     }
   }
+}
+
+img {
+  max-width: 100%;
 }
