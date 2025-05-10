@@ -2,6 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import ProfilePic from "../images/profilePic.jpg"
 import InfoCard from "./components/InfoCard.astro"
+
+import GithubIcon from "../icons/gihub.svg"
+import LinkedInIcon from "../icons/linkedin.svg"
+import FacebookIcon from "../icons/facebook.svg"
+import InstagramIcon from "../icons/instagram.svg"
+import YoutubeIcon from "../icons/youtube.svg"
+import MailIcon from "../icons/mail.svg"
+import FeedIcon from "../icons/feed.svg"
+
 const pageTitle = "About Me"
 ---
 
@@ -11,7 +20,7 @@ const pageTitle = "About Me"
     <InfoCard
       imageUrl={ProfilePic}
       title="Hi! I am Pritesh Tupe. Friends call me Pat."
-      content={`
+    >
       <p>
         I am a Full Stack Developer, focused on Web and Mobile application
         development. With 7+ years of industry experience across various
@@ -22,14 +31,44 @@ const pageTitle = "About Me"
       <p>
         If you have any queries regarding my projects, posts, or just wanna say
         hi, please contact me on any of the platforms below.
-      </p> `}
-    />
+      </p>
+    </InfoCard>
   </section>
 
   <section class="connect">
     <h2>Connect with me on:</h2>
 
-    <h2>Or send a message:</h2>
+    <div class="contact-icon-list">
+      <a target="_blank" href="https://github.com/p-tupe"
+        ><GithubIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="https://www.linkedin.com/in/priteshtupe/"
+        ><LinkedInIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="mailto:mail@priteshtupe.com"
+        ><MailIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="https://facebook.com/pritesh.tupe/"
+        ><FacebookIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="https://instagram.com/pritesh.tupe/"
+        ><InstagramIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="https://www.youtube.com/@PriteshTupe"
+        ><YoutubeIcon class="contact-icon" /></a
+      >
+      <a target="_blank" href="/rss.xml"><FeedIcon class="contact-icon" /></a>
+    </div>
+
+    <h2>Or send a message directly:</h2>
+
+    <InfoCard>
+      <textarea
+        required
+        id="msgTextarea"
+        placeholder="Write your message here..."></textarea>
+      <button id="msgBtn" type="button" onclick="sendMessage()">Send</button>
+    </InfoCard>
   </section>
 
   <section class="story">
@@ -111,18 +150,93 @@ const pageTitle = "About Me"
       that life has to offer and looking forward to what's to come. I've never
       been more content.
 
-      <aside>
+      <p>
         If you're interested in my journey, check out the (self-proclaimed) best <a
           href="/photos">photos</a
         > on the internet.
-      </aside>
+      </p>
     </div>
   </section>
 </BaseLayout>
 
+<script is:inline>
+  function sendMessage() {
+    const msgTxtarea = document.getElementById("msgTextarea")
+    const text = msgTxtarea.value
+    if (!text) {
+      alert("Please enter a message!")
+      return
+    }
+
+    fetch("https://api.priteshtupe.com/slack/", {
+      method: "POST",
+      headers: [
+        ["content-type", "application/json"],
+        ["authorization", "c2VydmljZS1tb25pdG9yaW5nLW1lc3NhZ2VzCg=="],
+      ],
+      body: JSON.stringify({ text }),
+    })
+      .then((res) => {
+        if (res.ok) {
+          const msgBtn = document.getElementById("msgBtn")
+          msgBtn.setAttribute("disabled", true)
+          msgBtn.style.backgroundColor = "var(--subcontent-color)"
+          msgBtn.innerText = "Sent!"
+        } else {
+          console.error(res)
+          alert("Unexpected error while sending message")
+        }
+      })
+      .catch((err) => {
+        console.error(err)
+        alert("Unexpected error while sending message")
+      })
+  }
+</script>
+
 <style>
   section {
     margin-bottom: 2em;
+  }
+
+  section.connect {
+    div.contact-icon-list {
+      display: flex;
+      width: 100%;
+      justify-content: space-evenly;
+
+      .contact-icon {
+        fill: var(--content-color);
+      }
+    }
+
+    textarea {
+      width: 85%;
+      border: none;
+      overflow: auto;
+      outline: none;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+
+      resize: none;
+      border-radius: 1em;
+      padding: 1em;
+      background-color: var(--background-color);
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: var(--link-color);
+      color: var(--background-color);
+      height: 100%;
+      padding: 0 1em 0 1em;
+      font-size: 1em;
+      border-radius: 0 1em 1em 0;
+    }
   }
 
   section.story {
