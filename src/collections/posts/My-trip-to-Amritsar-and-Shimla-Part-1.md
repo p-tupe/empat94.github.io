@@ -19,7 +19,7 @@ The road was quite good. It'd have been a straight shot had it not been for ongo
 
 Either way, myself fatigued from the late night drive (I genuinely dislike driving at night, everyone from front and behind, wants to driving with upper on always - a note to drivers, please switch dipper if you see a car ahead), sleep deprived from last night, not to mention hungry, was past caring about parking. Went to the hotel, took a quick shower and was off for dinner at a place called "Kesar da dhaba" - a place serving food for over a century; it was recommended to Rishab. It had a long line to prove its popularity. We waited for 10-15 min and got inside. Perhaps I've taken for granted the tasty food and prompt service I get back home (I'm from Navi Mumbai), perhaps the dhaba was too crowded, or whatever be the reason, I was not satisfied. The cost, the wait, the hype... Not worth the food, both in quantity and quality. Rishab got a lot of slack for that from the rest of us. In any case, at least I wasn't hungry anymore. Soon, we made our was to the Golden Temple. We reached what looked like an entrance. Aakash was insistent that the main entrance was elsewhere (he'd been here before). I noticed people taking off their shoes and heading inside, and we decided that we'll head inside from there instead of searching for the "main" entrance.
 
-![Golden Temple](/src/images/golden_temple.jpg)
+![Golden Temple](../../images/golden_temple.jpg)
 
 I have visited the Sun Temple down south, and the Taj Mahal in Agra, some of the best places I've ever seen so far. I expected to get similar vibes from this place. Unfortunately, we were late (given dinner and all) and the inner sanctum was closed. So we simply made a round of the place. It looks quite good. I couldn't taste the 'langer', because we had had our dinner already. So we left, planning to come the next morning to get inside. I wouldn't say much about my experience there as I was simply in and out, didn't get the absorb the ambience well.
 
@@ -31,13 +31,13 @@ While I did get some sleep, I woke up with a raging head ache. Should've been ob
 
 After breakfast, we again went to the Temple. This time the alleys were packed. And we brought our car coz we were checking out of our rooms and moving on. So yeah... It sucked. The heat, the traffic, the head ache, the noise, the pollution... Not a good experience. I had a tall glass of lemonade as we entered.  This time I believe we entered from the main gate. I was surprised to find that Jallianwala Bagh was so close, it was literally in front of the Temple. We visited the "Bagh", saw the bullet holes on the wall on the side where construction work wasn't ongoing. We couldn't find the Well mentioned in the stories. Perhaps was on the other side. In any case, we left the place pretty soon - didn't feel like a major destination point we had made it out to be.
 
-![Jallianwala Bagh](/src/images/jallianwala_bagh.jpg)
+![Jallianwala Bagh](../../images/jallianwala_bagh.jpg)
 
 
 Aakash & Rishab went ahead to see the inner temple; I was on the fence of whether to go or not when Shubham asked me to accompany him out shopping nearby. The shops were inside a building, with shade and cool air. I didn't hesitate. Shubham had just finished buying some stuff when the others came back. Seems like there was a waiting of 3-4 hours to go inside. Bummer. Instead I had another tall lemonade (It was really good, if you're not very hygiene-bound) and tried few different flavours of lassi at "Gani Di Lassi" after another parking hazard. Worth it.
 
 We left for Attari border. The climate had changed - suddenly storm clouds brewed on the horizon. The heat and head-ache from the morning seemed like a bad dream. Traffic was gone as we hit the highway. The day was turning about getting better as  every minute passed…
 
-![Attari Border](/src/images/attari_border.jpg)
+![Attari Border](../../images/attari_border.jpg)
 
 _continued on Part 2_
